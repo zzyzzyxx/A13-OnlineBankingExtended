@@ -83,6 +83,7 @@ public class UserController {
 	public String postOneUser(@PathVariable Long userId, User user) {
 		user.getAddress().setUserId(userId);
 		user.getAddress().setUser(user);
+		
 		if(user.getAddress().getUserId() == null) {
 			user.getAddress().setUserId(userId);
 		}
